@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage("Configure Prometheus & Grafana") {
+        stage("Configure  Prometheus & Grafana") {
             steps {
                 script {
                     sh """
