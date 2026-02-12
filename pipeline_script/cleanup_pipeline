@@ -41,7 +41,7 @@ pipeline {
                     // Step 4: Delete prometheus namespace
                     sh 'kubectl delete namespace prometheus || true'
 
-                    // Step 5: Remove Helm repositories
+                    // Step 5: Remove Helm Repositories
                     sh 'helm repo remove stable || true'
                     sh 'helm repo remove prometheus-community || true'
                 }
