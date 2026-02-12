@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tanweercloud-app
+  labels:
+    app: tanweercloud-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tanweercloud-app
+  template:
+    metadata:
+      labels:
+        app: tanweercloud-app
+    spec:
+      containers:
+      - name: tanweercloud-container
+        image: 309395755719.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
+        ports:
+        - containerPort: 3000
+...
